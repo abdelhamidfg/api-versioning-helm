@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "globex-activedoc-1-1-0.name" -}}
+{{- define "globex-activedoc-2-0-0.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "globex-activedoc-1-1-0.fullname" -}}
+{{- define "globex-activedoc-2-0-0.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "globex-activedoc-1-1-0.chart" -}}
+{{- define "globex-activedoc-2-0-0.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "globex-activedoc-1-1-0.labels" -}}
-helm.sh/chart: {{ include "globex-activedoc-1-1-0.chart" . }}
-{{ include "globex-activedoc-1-1-0.selectorLabels" . }}
+{{- define "globex-activedoc-2-0-0.labels" -}}
+helm.sh/chart: {{ include "globex-activedoc-2-0-0.chart" . }}
+{{ include "globex-activedoc-2-0-0.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "globex-activedoc-1-1-0.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "globex-activedoc-1-1-0.name" . }}
+{{- define "globex-activedoc-2-0-0.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "globex-activedoc-2-0-0.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "globex-activedoc-1-1-0.serviceAccountName" -}}
+{{- define "globex-activedoc-2-0-0.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "globex-activedoc-1-1-0.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "globex-activedoc-2-0-0.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
@@ -64,7 +64,7 @@ Create the name of the service account to use
 {{/*
 ArgoCD Syncwave
 */}}
-{{- define "globex-activedoc-1-1-0.argocd-syncwave" -}}
+{{- define "globex-activedoc-2-0-0.argocd-syncwave" -}}
 {{- if .Values.argocd }}
 {{- if and (.Values.argocd.syncwave) (.Values.argocd.enabled) -}}
 argocd.argoproj.io/sync-wave: "{{ .Values.argocd.syncwave }}"
