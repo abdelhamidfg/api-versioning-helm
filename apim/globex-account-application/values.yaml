@@ -1,4 +1,4 @@
-nameOverride: "basic"
+nameOverride: "globex-basic-app"
 
 
 argocd:
