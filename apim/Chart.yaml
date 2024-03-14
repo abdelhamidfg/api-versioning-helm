@@ -20,6 +20,9 @@ dependencies:
   - name: globex-activedoc-1-1-0
     version: 0.1.0
     repository: file://globex-activedoc-1-1-0
+  - name: globex-activedoc-2-0-0
+    version: 0.1.0
+    repository: file://globex-activedoc-2-0-0
   - name: globex-backend
     version: 0.1.0
     repository: file://globex-backend
