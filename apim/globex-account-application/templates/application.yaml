@@ -7,8 +7,8 @@ metadata:
 spec:
   accountCR:
     name: globex-developeraccount
-  applicationPlanName: basic
+  applicationPlanName: mobile-basic-plan
   description: Basic Plan
-  name: basic
+  name: mobile-basic-plan
   productCR:
     name: globex-product
