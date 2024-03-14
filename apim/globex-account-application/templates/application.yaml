@@ -8,7 +8,7 @@ spec:
   accountCR:
     name: globex-developeraccount
   applicationPlanName: mobile-basic-plan
-  description: Basic Plan
+  description: Globex Basic Plan
   name: mobile-basic-plan
   productCR:
     name: globex-product
