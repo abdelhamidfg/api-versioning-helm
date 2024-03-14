@@ -35,12 +35,12 @@ spec:
       increment: 1
       metricMethodRef: order_placement
   applicationPlans:
-    basic:
-      name: "Basic Plan"
+    globex-basic-plan:
+      name: "Globex Basic Plan"
       setupFee: "0"
       published: true
-    premium:
-      name: "Premium Plan"
+    globex-premium-plan:
+      name: "Globex Premium Plan"
       setupFee: "100"
       published: true
   backendUsages:
