@@ -6,7 +6,7 @@ minio:
   region:
   pvc:
     storage: 1Gi
-    storageClass: gp3-csi
+    storageClass: ocs-external-storagecluster-ceph-rbd
   route:
     tlsEnabled: true
     tls:
@@ -35,10 +35,10 @@ smtp:
   userId: ""
 
 system:
-  adminAccessToken:
-  adminPassword:
+  adminAccessToken: 88fb895da81b95270d3bc196b86edc211fa570fdec3d8f80581fa7fce4015512
+  adminPassword: admin
   masterAccessToken:
-  masterPassword:
+  masterPassword: master
   adminEmail: admin@email.com
   adminUserId: admin
   masterDomain: 3scale-master
